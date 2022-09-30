@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GreDev | Greta Li's Portfolio</title>
+    <script
+      src="https://kit.fontawesome.com/4925ccd0b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style/index.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"
+      defer
+    ></script>
+    <script src="./js/app.js" defer></script>
+    <script src="./js/slide.js" defer></script>
+  </head>
+  <body class="index">
+    <!-- primary header -->
+    <header>
+      <div class="primary-header">
+        <button class="nav-toggle" aria-label="toggle">
+          <span class="hamburger"></span>
+        </button>
+        <div class="nav__logo">
+          <a href="index.html">
+            <picture>
+              <source
+                loading="lazy"
+                media="(min-width: 1280px)"
+                srcset="./image/gredev_desktop.svg"
+              />
+              <img
+                loading="lazy"
+                src="./image/gredev_ mobile.svg"
+                alt="GretaDev"
+              />
+            </picture>
+          </a>
+        </div>
+        <div class="nav__social">
+          <a href="https://github.com/GretaLi" class="nav__link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://codepen.io/gretali" class="nav__link"
+            ><i class="fa-brands fa-codepen"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/gretali.frontend/"
+            class="nav__link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <nav class="nav">
+        <div class="title">
+          <p>Greta Li<span>Frontend Dev</span></p>
+        </div>
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">HOME</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="contact.html">CONTACT</a>
+          </li>
+          <li class="nav__item">
+            <a href="project.html">PROJECT</a>
+            <!-- <button class="dropdown-toggle">
+              <i class="fa-solid fa-caret-down"></i>
+            </button>
+            <ul class="nav__item-project dropdown-menu">
+              <li>
+                <a class="nav__link" href="project.html">featured works</a>
+              </li>
+              <li>
+                <a class="nav__link" href="project-websites.html"
+                  >websites (6)</a
+                >
+              </li>
+              <li>
+                <a class="nav__link" href="project-webapp.html">web apps (3)</a>
+              </li>
+              <li>
+                <a class="nav__link" href="project-component.html"
+                  >components (4)</a
+                >
+              </li>
+            </ul> -->
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">DOWNLOAD CV</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <section class="about">
+          <div class="title">
+            <h1>Greta Li<span>Frontend Dev</span></h1>
+          </div>
+          <h2>ABOUT ME</h2>
+          <p>Hi, I am Greta a frontend developer based in Taipei, Taiwan.</p>
+          <p>
+            I am practiced in web technologies HTML, CSS, and styled components,
+            as well as the programming language JavaScript.
+          </p>
+          <p>Let’s work together!</p>
+          <a href="contact.html">Contact me</a>
+        </section>
+        <section class="home-bg">
+          <img src="./image/home-bg.png" alt="" />
+        </section>
+
+        <section class="project">
+          <!-- Slider main container -->
+          <div class="swiper project__container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper project__wrapper">
+              <!-- Slides -->
+
+              <!-- slide 1 -->
+              <div class="swiper-slide project__item">
+                <div class="project__img">
+                  <img
+                    src="./image/yetta-studio-landing-page.png"
+                    alt="a picture of Yetta's Studio Landing Page"
+                  />
+                </div>
+
+                <div class="project__text">
+                  <h3>Yetta’s Studio Landing Page</h3>
+                  <p>
+                    A landing page for a beauty salon that makes it easier for
+                    users to access Yetta’s works, price list , FAQ and client’s
+                    feedback.
+                  </p>
+                  <div class="project__technique tag">
+                    <span>HTML</span> <span>CSS/SCSS</span>
+                    <span>jQuery</span>
+                  </div>
+                </div>
+              </div>
+              <!-- slide 2 -->
+              <div class="swiper-slide project__item">
+                <div class="project__img">
+                  <img
+                    src="./image/space-travel-website.png"
+                    alt="a picture of Space Travel Website"
+                  />
+                </div>
+
+                <div class="project__text">
+                  <h3>Space Travel Website</h3>
+                  <p>
+                    A responsive, multi-page site featuring a navbar, tabs,
+                    keyboard navigation and accessibility, built by an effective
+                    design system.
+                  </p>
+                  <div class="project__technique tag">
+                    <span>HTML</span> <span>CSS</span> <span>Vanilla JS</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="swiper-slide project__item">
+                <div class="project__img">
+                  <img
+                    src="./image/todo-list-web-app.png"
+                    alt="a picture of Todo List Web App"
+                  />
+                </div>
+
+                <div class="project__text">
+                  <h3>Todo List Web APP</h3>
+                  <p>
+                    A responsive todo web app featuring add/mark/delete todos
+                    functions, filter all/active/complete todos and toggle light
+                    & dark mode.
+                  </p>
+                  <div class="project__technique tag">
+                    <span>HTML</span> <span>CSS</span> <span>Vanilla JS</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="swiper-slide project__item">
+                <div class="project__img">
+                  <img
+                    src="./image/crowfunding-product-page.png"
+                    alt="a picture of Crowfunding Prdocut Page"
+                  />
+                </div>
+
+                <div class="project__text">
+                  <h3>Crowdfunding Product Page</h3>
+                  <p>
+                    A responsive product site featuring a navbar, bookmark,
+                    crowdfunding data display, a progress bar and an interactive
+                    form to make pledges.
+                  </p>
+                  <div class="project__technique tag">
+                    <span>HTML</span> <span>SCSS</span>
+                    <span>JavaScript</span>
+                    <span>jQuery</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Slide 5 -->
+              <div class="swiper-slide project__item">
+                <div class="project__img">
+                  <img
+                    src="./image/chattalker-landing-page.png"
+                    alt="a picture of chatTalker Landing Page"
+                  />
+                </div>
+
+                <div class="project__text">
+                  <h3>ChatTalker Langing Page</h3>
+                  <p>
+                    A landing page for a chat robot service that makes users to
+                    have their own chat robot for their business.
+                  </p>
+                  <div class="project__technique tag">
+                    <span>HTML</span> <span>CSS/SCSS</span>
+                    <span>jQuery</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project__btn">
+              <div class="swiper-button-prev project__btn-prev"></div>
+              <div class="swiper-button-next project__btn-next"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

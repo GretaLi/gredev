@@ -1,0 +1,75 @@
+/* ------------- */
+/* General Style */
+/* ------------- */
+
+// 1. title
+
+.title {
+  padding-top: clamp(60px, 7.4vh, 80px);
+  line-height: 1;
+  font-family: var(--ff-primary);
+  font-weight: 600;
+}
+
+.title > * {
+  margin-top: 0;
+  font-size: var(--fs-900);
+}
+
+.title span {
+  display: block;
+  font-size: var(--fs-800);
+}
+
+// 2. tag style
+.tag {
+  display: flex;
+  gap: 0.5em;
+  flex-wrap: wrap;
+
+  span {
+    display: inline-block;
+    padding: 0em 0.5em;
+    background: hsl(var(--clr-secondary), 0.2);
+    border-radius: var(--br-s);
+  }
+}
+
+// 3. dropdown menu & toggle
+.dropdown-menu {
+  display: none;
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-toggle {
+  display: inline-block;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  animation: close 0.2s ease forwards;
+  vertical-align: middle;
+}
+.dropdown-toggle.active {
+  animation: open 0.2s ease forwards;
+}
+
+@keyframes open {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-180deg);
+  }
+}
+
+@keyframes close {
+  0% {
+    transform: rotate(-180deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

@@ -1,0 +1,180 @@
+@import "mixin";
+@import "base";
+@import "layout";
+@import "component";
+
+@import "navigation";
+
+/* about me */
+
+.about {
+  @include py;
+
+  h2 {
+    padding: 0 1em 1em 1em;
+    font-size: var(--fs-500);
+  }
+
+  p {
+    padding: 0 1em 1em 1em;
+  }
+
+  a {
+    padding: 0 1em 1em 1em;
+    color: hsl(var(--clr-accent));
+  }
+}
+
+@include md {
+  .about {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      margin-bottom: auto;
+      position: relative;
+      z-index: 2;
+      white-space: nowrap;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* home bg */
+.home-bg {
+  margin-left: -2em;
+  margin-right: -2em;
+
+  @include md {
+    margin-left: 0;
+    margin-right: -4em;
+  }
+
+  @include xl {
+    margin-right: 0;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+/* project */
+
+.project {
+  @include py;
+  margin-top: -2em;
+  padding-left: 1em;
+  padding-top: 0;
+
+  @include md {
+    max-width: 60ch;
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+  }
+
+  @include xl {
+    margin-left: -2em;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.project__text {
+  padding: 1em;
+  h3 {
+    margin-bottom: 1em;
+    font-size: var(--fs-500);
+  }
+  p {
+    margin-bottom: 2em;
+  }
+
+  @include xl {
+    max-width: unset;
+    padding-left: 3em;
+    padding-right: 2.5em;
+  }
+}
+
+/* project slide */
+
+.project .swiper {
+  @include xl {
+    padding-top: clamp(80px, 10vh, 155px);
+  }
+}
+
+.project__btn {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  gap: 1.5em;
+  justify-content: flex-end;
+
+  &-prev,
+  &-next {
+    display: inline-block;
+    position: relative;
+    height: 56px;
+    width: 96px;
+    border: none;
+    cursor: pointer;
+    transform: scale(0.6);
+  }
+
+  &-prev {
+    background: url(../image/arrow_left.svg) no-repeat center center;
+  }
+
+  &-next {
+    background: url(../image/arrow_rigt.svg) no-repeat center center;
+  }
+
+  &-prev::after,
+  &-next::after {
+    content: "";
+    position: absolute;
+    width: 56px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: hsl(var(--clr-secondary), 0.2);
+  }
+
+  &-prev::after {
+    top: 0%;
+    left: -10%;
+  }
+  &-next::after {
+    top: 0%;
+    right: -10%;
+  }
+
+  @include md {
+    & {
+      padding: 2em 2em 1em 0;
+      gap: 3em;
+    }
+    &-prev,
+    &-next {
+      transform: scale(1);
+    }
+
+    & > *:hover::after {
+      transform: scale(1.15);
+      transition: all 0.5s ease;
+    }
+
+    & > *:active::after {
+      transform: scale(1);
+      transition: none;
+    }
+  }
+}

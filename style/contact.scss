@@ -1,0 +1,41 @@
+@import "mixin";
+@import "base";
+@import "layout";
+@import "component";
+
+@import "navigation";
+
+/* contact */
+
+.contact__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.contact__item h2 {
+  font-size: var(--fs-700);
+  font-weight: 400;
+}
+
+.contact__item a {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 0.5em;
+}
+
+@media (min-width: 1280px) {
+  .contact__wrapper {
+    flex-direction: row;
+    gap: 5em;
+  }
+
+  .contact__item li {
+    padding-left: 0.5em;
+  }
+
+  .contact__item h2 {
+    margin-bottom: 0.5em;
+  }
+}

@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+
+/* ----------------- */
+/* Custom Properties */
+/* ----------------- */
+
+:root {
+  --ff-primary: "Source Sans Pro", sans-serif;
+  --ff-secondary: "Source Code Pro", monospace;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-primary: 220, 4%, 16%;
+  --clr-secondary: 0, 0%, 90%;
+  --clr-accent: 5, 71%, 65%;
+  --clr-white: 0, 0%, 100%;
+  --clr-dark: 0, 4%, 8%;
+  --clr-graish: 216, 3%, 32%;
+
+  --fs-900: clamp(6rem, 10vw, 6rem);
+  --fs-800: clamp(3.5rem, 8vw, 5rem);
+  --fs-700: 2.5rem;
+  --fs-600: 1.5rem;
+  --fs-500: clamp(1.125rem, 3vw, 1.25rem);
+  --fs-400: 1rem;
+  --fs-300: 1rem;
+
+  --bs: 0.25em 0.25em 0.75em hsla(0, 5%, 11%, 0.25),
+    0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+
+  --br-s: 5px;
+  --br-m: 15px;
+
+  @include lg {
+    --fs-700: 3rem;
+    --fs-600: 1.75rem;
+    --fs-300: 1rem;
+  }
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: hsl(var(--clr-primary));
+  color: hsl(var(--clr-white));
+  font-family: var(--ff-secondary);
+  font-size: var(--fs-400);
+  line-height: 1.5;
+  transition: all 0.3s ease;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+strong {
+  font-weight: var(--fw-bold);
+}
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+::selection {
+  background-color: hsl(var(--clr-secondary), 0.95);
+  color: hsl(var(--clr-accent));
+}
+
+a {
+  color: hsl(var(--clr-white));
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+li {
+  list-style: none;
+}
