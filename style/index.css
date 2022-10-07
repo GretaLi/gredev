@@ -101,7 +101,7 @@ li {
 .container {
   width: 100;
   min-height: 100vh;
-  padding: 0 2em;
+  padding: 0 1em;
 }
 @media (min-width: 600px) {
   .container {
@@ -158,11 +158,13 @@ li {
 }
 
 .contact .container {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 @media (min-width: 600px) {
   .contact .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-top: clamp(40px, 10vh, 80px);
     padding-bottom: clamp(40px, 10vh, 80px);
   }
@@ -175,11 +177,13 @@ li {
 }
 
 .project .container {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 @media (min-width: 600px) {
   .project .container {
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-top: clamp(40px, 10vh, 80px);
     padding-bottom: clamp(40px, 10vh, 80px);
   }
@@ -290,16 +294,21 @@ li {
 /* primary header */
 .primary-header {
   width: 100%;
-  padding: 2em 2em 0;
+  padding: 2em 1em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media (min-width: 600px) {
+  .primary-header {
+    padding: 2em 2em 0;
+  }
+}
 
 .nav {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
   position: fixed;
   z-index: 100;
   inset: 0 0 0 0;
@@ -309,6 +318,8 @@ li {
 }
 @media (min-width: 600px) {
   .nav {
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-top: clamp(40px, 10vh, 80px);
     padding-bottom: clamp(40px, 10vh, 80px);
   }
@@ -387,13 +398,18 @@ li {
 
 /* nav toggle btn*/
 .nav-toggle {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
-  right: 2em;
+  right: 1em;
   padding: 1em 0.5em;
   background: transparent;
   border: 0;
   cursor: pointer;
+}
+@media (min-width: 600px) {
+  .nav-toggle {
+    right: 2em;
+  }
 }
 
 .hamburger {
@@ -535,11 +551,13 @@ li {
 }
 /* about me */
 .about {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 @media (min-width: 600px) {
   .about {
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-top: clamp(40px, 10vh, 80px);
     padding-bottom: clamp(40px, 10vh, 80px);
   }
@@ -579,8 +597,8 @@ li {
 }
 /* home bg */
 .home-bg {
-  margin-left: -2em;
-  margin-right: -2em;
+  margin-left: -1em;
+  margin-right: -1em;
 }
 @media (min-width: 600px) {
   .home-bg {
@@ -602,14 +620,16 @@ li {
 
 /* project */
 .project {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-top: -2em;
   padding-left: 1em;
   padding-top: 0;
 }
 @media (min-width: 600px) {
   .project {
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-top: clamp(40px, 10vh, 80px);
     padding-bottom: clamp(40px, 10vh, 80px);
   }

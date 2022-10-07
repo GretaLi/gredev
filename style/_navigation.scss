@@ -1,10 +1,13 @@
 /* primary header */
 .primary-header {
   width: 100%;
-  padding: 2em 2em 0;
+  padding: 2em 1em 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @include md {
+    padding: 2em 2em 0;
+  }
 }
 
 .nav {
@@ -84,13 +87,17 @@
 
 /* nav toggle btn*/
 .nav-toggle {
-  position: fixed;
+  position: absolute;
   z-index: 1000;
-  right: 2em;
+  right: 1em;
   padding: 1em 0.5em;
   background: transparent;
   border: 0;
   cursor: pointer;
+
+  @include md {
+    right: 2em;
+  }
 }
 
 .hamburger {

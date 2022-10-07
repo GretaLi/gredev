@@ -37,9 +37,11 @@
 /* padding  */
 
 @mixin py {
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
   @include md {
+    padding-top: 2em;
+    padding-bottom: 2em;
     padding-top: clamp(40px, 10vh, 80px);
     padding-bottom: clamp(40px, 10vh, 80px);
   }
@@ -51,7 +53,7 @@
 }
 
 @mixin pl {
-  padding-left: 2em;
+  padding-left: 1em;
 
   @include md {
     padding-left: 4em;

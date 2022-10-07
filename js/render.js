@@ -11,7 +11,7 @@ const data = [
     imgUrl: "./image/yetta-studio-landing-page.png",
     title: "Yetta’s Studio Landing Page",
     description:
-      "A landing page for a beauty salon that makes it easier for users to access Yetta’s works, price list , FAQ and client’s feedback.",
+      "A landing page for a beauty salon makes it easier for users to access Yetta’s works, price list, FAQ, and client feedback.",
     tag: ["HTML", "CSS/SCSS", "jQuery"],
   },
 
@@ -26,7 +26,7 @@ const data = [
     imgUrl: "./image/space-travel-website.png",
     title: "Space Travel Website",
     description:
-      "A responsive, multi-page site featuring a navbar, tabs, keyboard navigation and accessibility, built by an effective design system.",
+      "A responsive, multi-page site features a navbar, tabs, keyboard navigation, and accessibility, built by an effective design system.",
     tag: ["HTML", "CSS", "Vanilla JS"],
   },
 
@@ -41,7 +41,7 @@ const data = [
     imgUrl: "./image/todo-list-web-app.png",
     title: "Todo List Web APP",
     description:
-      "A responsive todo web app featuring add/mark/delete todos functions, filter all/active/complete todos and toggle light & dark mode.",
+      "A responsive todo-web app features add/mark/delete todo functions, filter different todo statuses and toggle light & dark modes.",
     tag: ["HTML", "CSS", "Vanilla JS"],
   },
 
@@ -56,7 +56,7 @@ const data = [
     imgUrl: "./image/crowfunding-product-page.png",
     title: "Crowdfunding Product Page",
     description:
-      "A responsive product site featuring a navbar, bookmark, crowdfunding data display, a progress bar and an interactive form to make pledges.",
+      "A responsive product site features a navbar, bookmark, crowdfunding data display, a progress bar, and an interactive form to make pledges.",
     tag: ["HTML", "SCSS", "JavaScript", "jQuery"],
   },
 
@@ -69,7 +69,7 @@ const data = [
     imgUrl: "./image/chattalker-landing-page.png",
     title: "ChatTalker Langing Page",
     description:
-      "A landing page for a chat robot service that makes users to have their own chat robot for their business.",
+      "A responsive product landing page for a chat robot service features an interactive price display and FAQ.",
     tag: ["HTML", "CSS/SCSS", "jQuery"],
   },
 
