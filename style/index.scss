@@ -10,6 +10,10 @@
 .about {
   @include py;
 
+  .title {
+    white-space: nowrap;
+  }
+
   h2 {
     padding: 0 1em 1em 1em;
     font-size: var(--fs-500);
@@ -34,7 +38,6 @@
       margin-bottom: auto;
       position: relative;
       z-index: 2;
-      white-space: nowrap;
     }
     a:hover {
       text-decoration: underline;
