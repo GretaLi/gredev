@@ -194,6 +194,9 @@ li {
   .project .container {
     overflow: auto;
   }
+  .project .container::-webkit-scrollbar {
+    width: 1px;
+  }
 }
 
 /* ------------- */
