@@ -120,6 +120,9 @@
     margin-bottom: 1em;
     font-size: var(--fs-500);
   }
+  p {
+    margin-top: 1em;
+  }
 
   @include md {
     padding: 1em;

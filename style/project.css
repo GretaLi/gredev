@@ -664,6 +664,9 @@ li {
   margin-bottom: 1em;
   font-size: var(--fs-500);
 }
+.project__item p {
+  margin-top: 1em;
+}
 @media (min-width: 600px) {
   .project__item {
     padding: 1em;
