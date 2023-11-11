@@ -707,50 +707,52 @@
       padding-right: 1em;
       padding-bottom: 1em;
     }
+  }
 
-    &__wrapper {
-      margin: 0 auto;
-      display: flex;
-      gap: 0.5em;
-      padding: 0.3em;
-      background: hsl(var(--clr-secondary), 0.2);
-      border: 1px solid hsl(var(--clr-secondary));
-      border-radius: 100px;
-      white-space: nowrap;
-      text-align: center;
+  &__wrapper {
+    margin: 0 auto;
+    display: flex;
+    gap: 0.5em;
+    padding: 0.3em;
+    background: hsl(var(--clr-secondary), 0.2);
+    border: 1px solid hsl(var(--clr-secondary));
+    border-radius: 100px;
+    white-space: nowrap;
+    text-align: center;
+  }
 
-      &__btn {
-        display: block;
-        padding: 0.8em 1em;
-        border-radius: 50px;
-        line-height: 1;
-        font-size: var(--fs-300);
-        font-family: var(--ff-primary);
-        background: transparent;
-        border: none;
-        color: hsl(var(--clr-secondary));
-        cursor: pointer;
+  &__item {
+    &:first-child .tab__btn {
+      padding-left: 2em;
+      background-image: url(../image/sparkles_light.png);
+      background-repeat: no-repeat;
+      background-position: 0.5em center;
+      background-size: 20%;
 
-        &:hover,
-        &.active {
-          background-color: hsl(var(--clr-secondary));
-          color: hsl(var(--clr-primary));
-          text-decoration: none;
-        }
+      &:hover,
+      &.active {
+        background-image: url(../image/sparkles_dark.png);
       }
+    }
+  }
 
-      &:first-child .tab__btn {
-        padding-left: 2em;
-        background-image: url(../image/sparkles_light.png);
-        background-repeat: no-repeat;
-        background-position: 0.5em center;
-        background-size: 20%;
+  &__btn {
+    display: block;
+    padding: 0.8em 1em;
+    border-radius: 50px;
+    line-height: 1;
+    font-size: var(--fs-300);
+    font-family: var(--ff-primary);
+    background: transparent;
+    border: none;
+    color: hsl(var(--clr-secondary));
+    cursor: pointer;
 
-        &:hover,
-        &.active {
-          background-image: url(../image/sparkles_dark.png);
-        }
-      }
+    &:hover,
+    &.active {
+      background-color: hsl(var(--clr-secondary));
+      color: hsl(var(--clr-primary));
+      text-decoration: none;
     }
   }
 }
