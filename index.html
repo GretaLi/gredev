@@ -288,17 +288,6 @@
     </footer>
     <script src="../js/vanilla-tilt.js"></script>
     <script type="text/javascript">
-      VanillaTilt.init(document.querySelector(`#circle`), {
-        max: 20,
-        scale: 1,
-        speed: 5500,
-        glare: false,
-        transition: true,
-        easing: "cubic-bezier(.03,.98,.52,.99)",
-        perspective: 2000,
-        "full-page-listening": true,
-      });
-
       // Initialize VanillaTilt for 3D Tilt Effect
       function initVanillaTilt() {
         for (let i = 1; i <= 6; i++) {
@@ -314,6 +303,17 @@
           });
         }
       }
+
+      VanillaTilt.init(document.querySelector(`#circle`), {
+          max: 20,
+          scale: 1,
+          speed: 5500,
+          glare: false,
+          transition: true,
+          easing: "cubic-bezier(.03,.98,.52,.99)",
+          perspective: 2000,
+          "full-page-listening": true,
+      });
 
       // Spread Skill Items on Large Screens
       function spreadSkillItems() {
