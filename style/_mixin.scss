@@ -1,11 +1,5 @@
 /* RWD 600px | 900px | 1280px */
 
-// @mixin sm {
-//   @media (max-width: 320px) {
-//     @content;
-//   }
-// }
-
 @mixin md {
   @media (min-width: 600px) {
     @content;

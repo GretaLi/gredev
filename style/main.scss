@@ -1,9 +1,8 @@
-@import "breakpoints";
-@import "base";
+@import "./mixin";
+@import "./base";
 
-@import "layout";
-@import "navigation";
-@import "components";
+@import "./layout";
+@import "./navigation";
+@import "./component";
 
-@import "index";
-@import "project";
+@import "./index.scss";

@@ -1,5 +1,6 @@
 /* primary header */
 .primary-header {
+  position: relative;
   width: 100%;
   padding: 2em 1em 0;
   display: flex;
@@ -13,25 +14,41 @@
 .nav {
   @include py;
   @include pl;
-
   position: fixed;
-  z-index: 100;
-  inset: 0 0 0 0;
+  inset: 0 0 40% 0;
+  z-index: -1;
+
+  width: 100%;
   background: hsl(var(--clr-primary));
-  transform: translateX(100%);
-  transition: all 0.5s ease;
+  transform: translateY(-100%);
+  opacity: 0;
 
   .title {
     padding-top: clamp(60px, 7.4vh, 80px);
     margin-top: 54px;
   }
+
+  &__logo {
+    margin-inline: auto;
+  }
+  @include md {
+  }
+
+  @include lg {
+    transform: translateX(100%);
+    width: 40%;
+    inset: 0 0 0 auto;
+  }
 }
 
 .nav-open {
+  overflow: hidden;
   .nav {
-    transform: translateX(0%);
     overflow-y: scroll;
-    transition: all 0.5s ease;
+    transition: transform 0.5s ease;
+    z-index: 11;
+    opacity: 1;
+    transform: translate(0%, 0%);
   }
 
   main::before {
@@ -40,7 +57,7 @@
     z-index: 10;
     inset: 0 0 0 0;
     background: hsl(var(--clr-dark), 0.5);
-    transition: all 3s ease;
+    transition: transform 3s ease;
   }
 }
 
@@ -142,11 +159,23 @@
       opacity: 0;
     }
   }
+
+  .nav-toggle {
+    position: fixed;
+
+    @include xl {
+      position: static;
+    }
+  }
 }
 
 @include md {
   .primary-header {
     position: absolute;
+  }
+
+  .nav__logo {
+    margin: unset;
   }
 
   .nav .title {
@@ -194,11 +223,7 @@
   }
 
   .nav__list {
-    gap: 4em;
-    flex-direction: row;
-    justify-content: flex-start;
     padding-left: 0;
-    padding-top: clamp(60px, 10vh, 120px);
   }
 
   .nav__item-project.dropdown-menu {

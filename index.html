@@ -22,7 +22,7 @@
       defer
     ></script>
     <script src="./js/app.js" defer></script>
-    <script src="./js/slide.js" defer></script>
+    <script src="./js/render.js" type="module" defer></script>
   </head>
   <body class="index">
     <!-- primary header -->
@@ -63,42 +63,23 @@
         </div>
       </div>
       <nav class="nav">
-        <div class="title">
-          <p>Greta Li<span>Frontend Dev</span></p>
-        </div>
         <ul class="nav__list">
           <li class="nav__item">
-            <a class="nav__link" href="#">HOME</a>
+            <a class="nav__link" href="/">HOME</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="contact.html">CONTACT</a>
+            <a href="#project">PROJECT</a>
           </li>
           <li class="nav__item">
-            <a href="project.html">PROJECT</a>
-            <!-- <button class="dropdown-toggle">
-              <i class="fa-solid fa-caret-down"></i>
-            </button>
-            <ul class="nav__item-project dropdown-menu">
-              <li>
-                <a class="nav__link" href="project.html">featured works</a>
-              </li>
-              <li>
-                <a class="nav__link" href="project-websites.html"
-                  >websites (6)</a
-                >
-              </li>
-              <li>
-                <a class="nav__link" href="project-webapp.html">web apps (3)</a>
-              </li>
-              <li>
-                <a class="nav__link" href="project-component.html"
-                  >components (4)</a
-                >
-              </li>
-            </ul> -->
+            <a class="nav__link" href="#contact">CONTACT</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="#">DOWNLOAD CV</a>
+            <a
+              target="_blank"
+              class="nav__link"
+              href="https://www.cakeresume.com/gretali.frontend"
+              >CV</a
+            >
           </li>
         </ul>
       </nav>
@@ -107,209 +88,340 @@
       <div class="container">
         <section class="about">
           <div class="title">
-            <h1>Greta Li<span>Frontend Dev</span></h1>
+            <h1 class="heading">
+              <span class="slide-up__wrapper">
+                <span class="slide-up">Nice to meet you!</span>
+              </span>
+              <span class="slide-up__wrapper">
+                <span class="slide-up"
+                  >I'm <strong class="title__name">Greta Li.</strong></span
+                >
+              </span>
+            </h1>
           </div>
-          <h2>ABOUT ME</h2>
-          <p>Hi, I am Greta a frontend developer based in Taipei, Taiwan.</p>
           <p>
-            I am practiced in web technologies HTML, CSS, and styled components,
-            as well as the programming language JavaScript.
+            As a front-end developer based in Taiwan, I am dedicated to creating
+            web applications that are user-friendly and responsive. My passion
+            for this field is fueled by my love for learning and my commitment
+            to delivering high-quality work.
           </p>
           <p>Let’s work together!</p>
-          <a href="contact.html">Contact me</a>
+          <a class="btn-cta" href="contact.html">Contact me</a>
         </section>
         <section class="home-bg">
           <img src="./image/home-bg.png" alt="" />
+          <div class="circle" id="circle"></div>
         </section>
 
-        <section class="project">
-          <!-- Slider main container -->
-          <div class="swiper project__container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper project__wrapper">
-              <!-- Slides -->
-
-              <!-- slide 1 -->
-              <div class="swiper-slide project__item">
-                <div class="project__img">
-                  <img
-                    src="./image/roma-travel-multipage-website.png"
-                    alt="a picture of Roma Travel Website"
-                  />
-                </div>
-
-                <div class="project__text">
-                  <h3>
-                    <a
-                      href="https://gretali.github.io/Scopriamo-Roma/pages/index.html"
-                      target="_blank"
-                      >Roma Travel Website</a
-                    >
-                  </h3>
-                  <p>
-                    A multipage website that users can access useful information
-                    and know what's worth seeing at the attractions. Registered
-                    users can leave a comment for a specific location, collect
-                    their favorite attractions and also see them on their own
-                    map.
-                  </p>
-                  <div class="project__technique tag">
-                    <span>HTML</span> <span>CSS/SCSS</span>
-                    <span>Vanilla JS</span>
-                    <span>API</span>
-                    <span>GSAP.js</span>
-                    <span>Leaflet.js</span>
-                  </div>
-                </div>
-              </div>
-              <!-- slide 2 -->
-              <div class="swiper-slide project__item">
-                <div class="project__img">
-                  <img
-                    src="./image/yetta-studio-landing-page.png"
-                    alt="a picture of Yetta's Studio Landing Page"
-                  />
-                </div>
-
-                <div class="project__text">
-                  <h3>
-                    <a
-                      href="https://gretali.github.io/Product-Landing-Page/Yetta%20Studio/"
-                      target="_blank"
-                      >Yetta’s Studio Landing Page</a
-                    >
-                  </h3>
-                  <p>
-                    A landing page for a beauty salon makes it easier for users
-                    to access Yetta’s works, price list, FAQ, and client
-                    feedback.
-                  </p>
-                  <div class="project__technique tag">
-                    <span>HTML</span> <span>CSS/SCSS</span>
-                    <span>jQuery</span>
-                  </div>
-                </div>
-              </div>
-              <!-- slide 3 -->
-              <div class="swiper-slide project__item">
-                <div class="project__img">
-                  <img
-                    src="./image/space-travel-website.png"
-                    alt="a picture of Space Travel Website"
-                  />
-                </div>
-
-                <div class="project__text">
-                  <h3>
-                    <a
-                      href="https://gretali.github.io/Frontend-Mentor-Challenge/Space-tourism-website-main/index.html"
-                      target="_blank"
-                      >Space Travel Website</a
-                    >
-                  </h3>
-                  <p>
-                    A responsive, multi-page site features a navbar, tabs,
-                    keyboard navigation, and accessibility, built by an
-                    effective design system.
-                  </p>
-                  <div class="project__technique tag">
-                    <span>HTML</span> <span>CSS</span> <span>Vanilla JS</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 4 -->
-              <div class="swiper-slide project__item">
-                <div class="project__img">
-                  <img
-                    src="./image/todo-list-web-app.png"
-                    alt="a picture of Todo List Web App"
-                  />
-                </div>
-
-                <div class="project__text">
-                  <h3>
-                    <a
-                      href="https://gretali.github.io/Frontend-Mentor-Challenge/Todo-app-main/"
-                      target="_blank"
-                      >Todo List Web APP</a
-                    >
-                  </h3>
-                  <p>
-                    A responsive todo-web app features add/mark/delete todo
-                    functions, filter different todo statuses and toggle light &
-                    dark modes.
-                  </p>
-                  <div class="project__technique tag">
-                    <span>HTML</span> <span>CSS</span> <span>Vanilla JS</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 5 -->
-              <div class="swiper-slide project__item">
-                <div class="project__img">
-                  <img
-                    src="./image/crowfunding-product-page.png"
-                    alt="a picture of Crowfunding Prdocut Page"
-                  />
-                </div>
-
-                <div class="project__text">
-                  <h3>
-                    <a
-                      href="https://gretali.github.io/Frontend-Mentor-Challenge/Cowdfunding-product-page-main/"
-                      target="_blank"
-                      >Crowdfunding Product Page</a
-                    >
-                  </h3>
-                  <p>
-                    A responsive product site features a navbar, bookmark,
-                    crowdfunding data display, a progress bar and an interactive
-                    form to make pledges.
-                  </p>
-                  <div class="project__technique tag">
-                    <span>HTML</span> <span>SCSS</span>
-                    <span>JavaScript</span>
-                    <span>jQuery</span>
-                  </div>
-                </div>
-              </div>
-              <!-- Slide 6 -->
-              <div class="swiper-slide project__item">
-                <div class="project__img">
-                  <img
-                    src="./image/chattalker-landing-page.png"
-                    alt="a picture of chatTalker Landing Page"
-                  />
-                </div>
-
-                <div class="project__text">
-                  <h3>
-                    <a
-                      href="https://gretali.github.io/chatTalker/"
-                      target="_blank"
-                      >ChatTalker Langing Page</a
-                    >
-                  </h3>
-                  <p>
-                    A responsive product landing page for a chat robot service
-                    features an interactive price display and FAQ.
-                  </p>
-                  <div class="project__technique tag">
-                    <span>HTML</span> <span>CSS/SCSS</span>
-                    <span>jQuery</span>
-                  </div>
-                </div>
-              </div>
+        <section class="skill">
+          <div class="skill__wrapper">
+            <div class="skill__item skill__item1">
+              <h3 class="skill__item-title">HTML</h3>
+              <code class="skill__item-description"
+                >&lt;<span class="code-blue">img</span>
+                <span class="code-light-blue">title</span>=<span
+                  class="code-orange"
+                  >"Creating website structure and content with Semantic
+                  HTML.</span
+                >
+                /&gt;"
+              </code>
             </div>
-            <div class="project__btn">
-              <div class="swiper-button-prev project__btn-prev"></div>
-              <div class="swiper-button-next project__btn-next"></div>
+
+            <div class="skill__item skill__item2">
+              <h3 class="skill__item-title">CSS</h3>
+              <code class="skill__item-description">
+                <span class="code-yellow">.css</span> {<span
+                  class="code-light-blue"
+                  >Designing website styles and layouts</span
+                >}
+              </code>
+            </div>
+
+            <div class="skill__item skill__item3">
+              <h3 class="skill__item-title">Javascript</h3>
+              <code class="skill__item-description">
+                <span class="code-blue">const</span>
+                <span class="code-light-blue">development</span> =
+                <span class="code-light-blue">website</span
+                ><span class="code-yellow">.enhance</span>(<span
+                  class="code-orange"
+                  >"interactivity && functionality"</span
+                >)
+              </code>
+            </div>
+
+            <div class="skill__item skill__item4">
+              <h3 class="skill__item-title">Technical SEO</h3>
+              <code class="skill__item-description">
+                <code
+                  >&lt;<span class="code-blue">meta</span>
+                  <span class="code-light-blue">content</span>=<span
+                    class="code-orange"
+                    >"Optimizing website performance and search engine
+                    rankings."</span
+                  >
+                  /&gt;</code
+                >
+              </code>
+            </div>
+
+            <div class="skill__item skill__item5">
+              <h3 class="skill__item-title">SCSS</h3>
+              <code class="skill__item-description">
+                <span class="code-blue">@include</span>
+                <span class="code-yellow">SCSS</span> {<span
+                  class="code-light-blue"
+                  >For more efficient and ordanized CSS development</span
+                >}
+              </code>
+            </div>
+
+            <div class="skill__item skill__item6">
+              <h3 class="skill__item-title">React</h3>
+              <code class="skill__item-description">
+                <span class="code-blue">const</span>
+                <span class="code-light-blue">reactDevelopment</span> =
+                <span class="code-light-blue">React</span
+                ><span class="code-yellow">.build</span>(<span
+                  class="code-orange"
+                  >"singlePageApplications & components"</span
+                >);
+              </code>
             </div>
           </div>
+        </section>
+
+        <section class="project" id="project">
+          <h2 class="title">Project</h2>
+          <a href="" class="btn-cta">Contact Me</a>
+          <div class="tab__cotnainer">
+            <ul class="tab__wrapper">
+              <li class="tab__item">
+                <button id="featured" class="tab__btn active">Featured</button>
+              </li>
+              <li class="tab__item">
+                <button id="website" class="tab__btn">Website</button>
+              </li>
+              <li class="tab__item">
+                <button id="webApp" class="tab__btn">Web App</button>
+              </li>
+              <li class="tab__item">
+                <button id="component" class="tab__btn">Component</button>
+              </li>
+            </ul>
+          </div>
+          <div class="project__wrapper" id="project-wrapper"></div>
+        </section>
+      </div>
+      <div class="contact__bg">
+        <section class="contact" id="contact">
+          <div class="contact__text">
+            <h2 class="title">Contact</h2>
+            <p>
+              I would love to hear about your project and how I could help.
+              Please fill in the form, and I’ll get back to you as soon as
+              possible.
+            </p>
+          </div>
+          <form
+            action="https://formspree.io/f/xwkdzgkl"
+            method="POST"
+            class="contact__form"
+            id="contact-form"
+            onsubmit="return handleFormSubmission(event)"
+          >
+            <div class="input-feild">
+              <input id="contact-name" type="text" name="name" />
+              <label for="contact-name">NAME</label>
+            </div>
+            <div class="input-feild">
+              <input id="contact-email" type="email" name="email" />
+              <label for="contact-email">EMAIL</label>
+            </div>
+            <div class="input-feild">
+              <textarea
+                id="contact-message"
+                name="message"
+                cols=""
+                rows=""
+              ></textarea>
+              <label for="contact-message">MESSAGE</label>
+            </div>
+            <button type="submit" class="btn-cta">SEND MESSAGE</button>
+
+            <div class="contact__form-status" id="contact-form-status"></div>
+          </form>
         </section>
       </div>
     </main>
 
-    <footer></footer>
+    <footer class="footer__bg">
+      <div class="footer">
+        <div class="footer__logo">
+          <a href="index.html">
+            <picture>
+              <img
+                loading="lazy"
+                src="./image/gredev_ mobile.svg"
+                alt="GretaDev"
+              />
+            </picture>
+          </a>
+        </div>
+
+        <div class="footer__social">
+          <a href="https://github.com/GretaLi" class="nav__link" target="_blank"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://codepen.io/gretali" class="nav__link" target="_blank"
+            ><i class="fa-brands fa-codepen"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/gretali.frontend/"
+            target="_blank"
+            class="nav__link"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelector(`#circle`), {
+        max: 20,
+        scale: 1,
+        speed: 5500,
+        glare: false,
+        transition: true,
+        easing: "cubic-bezier(.03,.98,.52,.99)",
+        perspective: 2000,
+        "full-page-listening": true,
+      });
+
+      // Initialize VanillaTilt for 3D Tilt Effect
+      function initVanillaTilt() {
+        for (let i = 1; i <= 6; i++) {
+          VanillaTilt.init(document.querySelector(`.skill__item${i}`), {
+            max: 20,
+            scale: 1.1,
+            speed: 3500,
+            glare: false,
+            "max-glare": 0.1,
+            transition: true,
+            easing: "cubic-bezier(.03,.98,.52,.99)",
+            perspective: 800,
+          });
+        }
+      }
+
+      // Spread Skill Items on Large Screens
+      function spreadSkillItems() {
+        const skillItems = document.querySelectorAll(".skill__item");
+        setTimeout(() => {
+          skillItems.forEach((item) => {
+            item.classList.add("spread");
+          });
+        }, 1000);
+
+        setTimeout(() => {
+          skillItems.forEach((item) => {
+            item.classList.remove("spread");
+          });
+        }, 3000);
+
+        skillItems.forEach((item) => {
+          item.addEventListener("click", (e) => {
+            skillItems.forEach((item) => {
+              item.classList.remove("active");
+            });
+            e.target.classList.toggle("active");
+          });
+        });
+
+        window.addEventListener("click", (e) => {
+          if (!e.target.classList.contains("skill__item")) {
+            const activeItem = document.querySelector(".skill__item.active");
+            if (activeItem) {
+              activeItem.classList.remove("active");
+            }
+          }
+        });
+      }
+
+      spreadSkillItems();
+      initVanillaTilt();
+      const inputEls = document.querySelectorAll("#contact-form input");
+      const labelEls = document.querySelectorAll("#contact-form label");
+      const textareaEl = document.querySelector("#contact-form textarea");
+      inputEls.forEach((inputEl, index) => {
+        if (index <= 2) {
+          inputEl.addEventListener("focus", () => {
+            inputEl.classList.add("focus");
+            if (!inputEl.value) {
+              labelEls[index].classList.add("focus");
+            }
+          });
+
+          inputEl.addEventListener("blur", () => {
+            inputEl.classList.remove("focus");
+            if (!inputEl.value) {
+              labelEls[index].classList.remove("focus");
+            }
+          });
+        }
+      });
+
+      textareaEl.addEventListener("focus", () => {
+        textareaEl.classList.add("focus");
+        if (!textareaEl.value) {
+          labelEls[2].classList.add("focus");
+        }
+      });
+      textareaEl.addEventListener("blur", () => {
+        textareaEl.classList.remove("focus");
+        if (!textareaEl.value) {
+          labelEls[2].classList.remove("focus");
+        }
+      });
+
+      const form = document.getElementById("contact-form");
+
+      async function handleFormSubmission(event) {
+        event.preventDefault();
+        const status = document.getElementById("contact-form-status");
+        const data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              status.innerHTML = "感謝您的提交！";
+              form.reset();
+              // 在這裡執行重定向
+              // window.location.href = "https://your-redirect-url.com";
+            } else {
+              response.json().then((data) => {
+                if (Object.hasOwnProperty.call(data, "errors")) {
+                  status.innerHTML = data["errors"]
+                    .map((error) => error["message"])
+                    .join(", ");
+                } else {
+                  status.innerHTML = "糟糕！提交表單時出現問題";
+                }
+              });
+            }
+          })
+          .catch((error) => {
+            status.innerHTML = "糟糕！提交表單時出現問題";
+          });
+      }
+
+      form.addEventListener("submit", handleFormSubmission);
+    </script>
   </body>
 </html>

@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
-
+// @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 /* ----------------- */
 /* Custom Properties */
 /* ----------------- */
 
 :root {
   --ff-primary: "Source Sans Pro", sans-serif;
-  --ff-secondary: "Source Code Pro", monospace;
+  // --ff-primary: "Cabin", sans-serif;
+  // --ff-secondary: "Source Code Pro", monospace;
+  --ff-secondary: "Roboto", sans-serif;
 
   --fw-reg: 300;
   --fw-bold: 900;
@@ -15,17 +18,17 @@
   --clr-primary: 220, 4%, 16%;
   --clr-secondary: 0, 0%, 90%;
   --clr-accent: 5, 71%, 65%;
-  --clr-white: 0, 0%, 100%;
+  --clr-white: 46, 100%, 97%;
   --clr-dark: 0, 4%, 8%;
   --clr-graish: 216, 3%, 32%;
 
-  --fs-900: clamp(6rem, 10vw, 6rem);
+  --fs-900: clamp(2.25rem, 1.125rem + 5.625vw, 5.625rem);
   --fs-800: clamp(3.5rem, 8vw, 5rem);
   --fs-700: 2.5rem;
   --fs-600: 1.5rem;
   --fs-500: clamp(1.125rem, 3vw, 1.25rem);
   --fs-400: 1rem;
-  --fs-300: 1rem;
+  --fs-300: 0.875rem;
 
   --bs: 0.25em 0.25em 0.75em hsla(0, 5%, 11%, 0.25),
     0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
@@ -36,7 +39,6 @@
   @include lg {
     --fs-700: 3rem;
     --fs-600: 1.75rem;
-    --fs-300: 1rem;
   }
 }
 
@@ -55,11 +57,26 @@ html {
 body {
   min-height: 100vh;
   background: hsl(var(--clr-primary));
+  background: linear-gradient(180deg, #232121 0%, #28292b 100%);
   color: hsl(var(--clr-white));
   font-family: var(--ff-secondary);
   font-size: var(--fs-400);
   line-height: 1.5;
-  transition: all 0.3s ease;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+p {
+  letter-spacing: 1px;
 }
 
 img {

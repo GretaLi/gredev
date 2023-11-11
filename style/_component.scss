@@ -5,23 +5,70 @@
 // 1. title
 
 .title {
-  padding-top: clamp(60px, 7.4vh, 80px);
+  // padding-top: clamp(60px, 7.4vh, 80px);
   line-height: 1;
   font-family: var(--ff-primary);
   font-weight: 600;
-}
 
-.title > * {
-  margin-top: 0;
-  font-size: var(--fs-900);
-}
-
-.title span {
-  display: block;
   font-size: var(--fs-800);
+  margin-bottom: 0.5em;
 }
 
-// 2. tag style
+// 2. button
+
+.btn-cta {
+  margin-right: auto;
+  position: relative;
+  display: inline-block;
+  font-size: var(--fs-500);
+  font-family: var(--ff-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  padding: 1em 0;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0.5em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: hsl(var(--clr-accent));
+
+    transform: translateX(-100%);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0.5em;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background-color: hsl(var(--clr-accent));
+    transform: translateX(0);
+  }
+
+  &:hover::after {
+    transition: all 0.3s 0.2s ease-in;
+    transform: translateX(0%);
+    box-shadow: 0 0 8px hsla(var(--clr-accent), 0.5);
+  }
+
+  &:hover::before {
+    transform: translateX(100%);
+    transition: all 0.3s ease-in;
+  }
+}
+
+// 3. tag style
 .tag {
   display: flex;
   gap: 0.5em;
@@ -32,44 +79,5 @@
     padding: 0em 0.5em;
     background: hsl(var(--clr-secondary), 0.2);
     border-radius: var(--br-s);
-  }
-}
-
-// 3. dropdown menu & toggle
-.dropdown-menu {
-  display: none;
-}
-
-.dropdown-menu.active {
-  display: block;
-}
-
-.dropdown-toggle {
-  display: inline-block;
-  background: transparent;
-  border: 0;
-  cursor: pointer;
-  animation: close 0.2s ease forwards;
-  vertical-align: middle;
-}
-.dropdown-toggle.active {
-  animation: open 0.2s ease forwards;
-}
-
-@keyframes open {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(-180deg);
-  }
-}
-
-@keyframes close {
-  0% {
-    transform: rotate(-180deg);
-  }
-  100% {
-    transform: rotate(0deg);
   }
 }

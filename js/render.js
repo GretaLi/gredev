@@ -1,7 +1,5 @@
 // project page
-
 import { projectData } from "./data.js";
-console.log(projectData);
 
 let newData = projectData.filter(function (obj) {
   return obj.feature === true;
@@ -95,15 +93,21 @@ function createCard(objArr) {
         </div>
         <div class="project__modal-overlay">
           <div class="project__modal">
-            <img
+            <img 
+              class="project__modal-img"
               src="${imgUrl}"
               alt="a picture of Crowfunding Prdocut Page"
             />
-            <h3>${title}</h3>
-            <p>${description}</p>
-            <div class="project__modal-button">
-                <a href="${liveUrl}" target="__blank">Live Site</a>
-                <a href="${repoUrl}" target="__blank">Repository</a>
+            <div class="project__modal-text">
+              <h3>${title}</h3>
+              <p>${description}</p>
+              <div class="project__technique tag">
+                ${tags}
+              </div>
+            </div>
+            <div class="project__modal-buttons">
+              <a class="btn-cta" href="${liveUrl}" target="__blank">Live Site</a>
+              <a class="btn-cta" href="${repoUrl}" target="__blank">Repository</a>
             </div>
           </div>
         </div>
@@ -132,6 +136,7 @@ openModal(modalToggles, overlays);
 function openModal(modalToggles, overlays) {
   modalToggles.forEach((toggle) => {
     toggle.addEventListener("click", (e) => {
+      e.preventDefault();
       let target = e.target;
       let projectItem = target.parentElement.parentElement.parentElement;
       projectItem.classList.add("active");
@@ -141,7 +146,13 @@ function openModal(modalToggles, overlays) {
   overlays.forEach((overlay) => {
     overlay.addEventListener("click", (e) => {
       let projectItem = e.target.parentElement;
-      projectItem.classList.remove("active");
+      console.log(projectItem);
+      if (
+        !projectItem.classList.contains("project__modal") &&
+        !projectItem.classList.contains("project__modal-button")
+      ) {
+        projectItem.classList.remove("active");
+      }
     });
   });
 }
