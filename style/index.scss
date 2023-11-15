@@ -153,6 +153,7 @@
   .title {
     position: relative;
     white-space: nowrap;
+    margin-bottom: 0;
 
     &::after {
       position: absolute;
@@ -203,7 +204,6 @@
 
   > .slide-up__wrapper {
     overflow: hidden;
-
     > .slide-up {
       display: inline-block;
       width: max-content;
@@ -211,18 +211,9 @@
       margin: 0;
       line-height: 117%;
     }
-  }
-
-  @for $i from 2 through 3 {
-    h1.heading {
-      > .slide-up__wrapper {
-        animation-delay: 0;
-
-        &:nth-child(#{$i}) {
-          > .slide-up {
-            animation-delay: $i * 0.05s;
-          }
-        }
+    &:nth-child(2) {
+      .slide-up {
+        animation-delay: 0.1s;
       }
     }
   }
@@ -789,7 +780,6 @@
   flex-direction: column;
   align-items: stretch;
   gap: 2rem;
-  border-bottom: 2px solid hsl(var(--clr-secondary));
 
   .title {
     position: relative;
@@ -818,10 +808,12 @@
       max-width: 60ch;
       margin-inline: auto;
       padding-inline: 1em;
+      letter-spacing: 2px;
     }
   }
 
   &__form {
+    position: relative;
     .input-feild {
       position: relative;
       padding: 1em;
@@ -874,6 +866,24 @@
     display: block;
   }
 
+  &__form-status {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid hsla(var(--clr-white), 0.6);
+    border-bottom-width: 0.5rem;
+    background: rgba(30, 30, 30, 0.9764705882);
+    box-shadow: 0 0 15px hsla(var(--clr-white), 0.2);
+  }
+  &__form-status.active {
+    display: block;
+    animation: slideup 0.3s ease;
+  }
+
   @include md {
     padding-inline: 1.875rem;
   }
@@ -909,12 +919,13 @@
 // Footer
 .footer {
   &__bg {
+    border-top: 2px solid hsl(var(--clr-secondary));
     background-color: #1b1c1d;
   }
 
   max-width: 1280px;
   margin-inline: auto;
-  width: 100%;
+  width: 90%;
   padding: 2rem 1.5rem;
   display: flex;
   justify-content: space-between;
@@ -939,7 +950,7 @@
     padding-inline: 1.875rem;
   }
 
-  @include lg {
+  @include xl {
     &__social {
       display: none;
     }
@@ -956,5 +967,14 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+@keyframes slideup {
+  0% {
+    top: 60%;
+  }
+  100% {
+    top: 50%;
   }
 }
