@@ -56,8 +56,10 @@ html {
 
 body {
   min-height: 100vh;
-  background: hsl(var(--clr-primary));
-  background: linear-gradient(180deg, #232121 0%, #28292b 100%);
+  background-color: hsl(var(--clr-primary));
+  background-image: url(../image/black-noise.png),
+    linear-gradient(180deg, #232121 0%, #28292b 100%);
+  background-size: 200px 200px, cover;
   color: hsl(var(--clr-white));
   font-family: var(--ff-secondary);
   font-size: var(--fs-400);

@@ -20,6 +20,8 @@
 
   width: 100%;
   background: hsl(var(--clr-primary));
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
   transform: translateY(-100%);
   opacity: 0;
 
@@ -220,6 +222,8 @@
     gap: 2em;
     border-left: 2px solid hsl(var(--clr-secondary));
     background: hsl(var(--clr-primary));
+    background-image: url(../image/black-noise.png);
+    background-size: 200px 200px;
   }
 
   .nav__list {

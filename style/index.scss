@@ -243,8 +243,16 @@
 
 /* Home Background */
 .home-bg {
+  position: relative;
   margin-left: -1em;
   margin-right: -1em;
+  &::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    background-image: url(../image/black-noise.png);
+    opacity: 0.5;
+  }
   @include md {
     margin-left: 0;
     margin-right: -4em;
@@ -356,14 +364,16 @@
     }
 
     @for $i from 1 through 6 {
-      $backgrounds: #082428f9, #2e2d0af9, #1e0303f9, #06271bf9, #281e2cf9,
-        #171717f9;
+      $backgrounds: #030e0fdd, #141304dd, #0e0101dd, #020f0bdd, #0d0610dd,
+        #110e0edd;
       $topValues: 40vh - (12vh * ($i - 1));
       $activeTopValues: calc(-9.75rem * ($i - 1) + 8rem);
 
       &:nth-child(#{$i}) {
-        background: #242c32;
-        background: #1e1e1ef9;
+        // background: #1e1e1ef9;
+        background-color: nth($backgrounds, $i);
+        background-image: url(../image/black-noise.png);
+        background-size: 200px 200px;
 
         @include xl {
           top: nth($topValues, 1);
@@ -593,6 +603,8 @@
     max-height: 90vh;
     padding: 2rem 1rem;
     background-color: hsl(var(--clr-dark), 0.9);
+    background-image: url(../image/black-noise.png);
+    background-size: 200px 200px;
     backdrop-filter: blur(10px);
     animation: popIn 0.3s ease;
     border-top-right-radius: 15px;
@@ -877,6 +889,8 @@
     border: 1px solid hsla(var(--clr-white), 0.6);
     border-bottom-width: 0.5rem;
     background: rgba(30, 30, 30, 0.9764705882);
+    background-image: url(../image/black-noise.png);
+    background-size: 200px 200px;
     box-shadow: 0 0 15px hsla(var(--clr-white), 0.2);
   }
   &__form-status.active {
@@ -908,6 +922,9 @@
 
   &__bg {
     background-color: #1b1c1d;
+    background-image: url(../image/black-noise.png),
+      linear-gradient(180deg, #1b1c1d 0%, #202122 100%);
+    background-size: 200px 200px, cover;
 
     @include lg {
       padding-right: clamp(72px, 6.25vw, 120px);
@@ -921,6 +938,8 @@
   &__bg {
     border-top: 2px solid hsl(var(--clr-secondary));
     background-color: #1b1c1d;
+    background-image: url(../image/black-noise.png);
+    background-size: 200px 200px;
   }
 
   max-width: 1280px;

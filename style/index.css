@@ -49,8 +49,9 @@ html {
 
 body {
   min-height: 100vh;
-  background: hsl(var(--clr-primary));
-  background: linear-gradient(180deg, #232121 0%, #28292b 100%);
+  background-color: hsl(var(--clr-primary));
+  background-image: url(../image/black-noise.png), linear-gradient(180deg, #232121 0%, #28292b 100%);
+  background-size: 200px 200px, cover;
   color: hsl(var(--clr-white));
   font-family: var(--ff-secondary);
   font-size: var(--fs-400);
@@ -229,6 +230,8 @@ li {
   z-index: -1;
   width: 100%;
   background: hsl(var(--clr-primary));
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
   transform: translateY(-100%);
   opacity: 0;
 }
@@ -429,6 +432,8 @@ li {
     gap: 2em;
     border-left: 2px solid hsl(var(--clr-secondary));
     background: hsl(var(--clr-primary));
+    background-image: url(../image/black-noise.png);
+    background-size: 200px 200px;
   }
   .nav__list {
     padding-left: 0;
@@ -683,8 +688,16 @@ li {
 }
 /* Home Background */
 .home-bg {
+  position: relative;
   margin-left: -1em;
   margin-right: -1em;
+}
+.home-bg::after {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-image: url(../image/black-noise.png);
+  opacity: 0.5;
 }
 @media (min-width: 600px) {
   .home-bg {
@@ -813,8 +826,9 @@ li {
   box-shadow: 0 0 15px hsla(var(--clr-white), 0.2);
 }
 .skill__item:nth-child(1) {
-  background: #242c32;
-  background: rgba(30, 30, 30, 0.9764705882);
+  background-color: rgba(3, 14, 15, 0.8666666667);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 @media (min-width: 1280px) {
   .skill__item:nth-child(1) {
@@ -836,8 +850,9 @@ li {
   }
 }
 .skill__item:nth-child(2) {
-  background: #242c32;
-  background: rgba(30, 30, 30, 0.9764705882);
+  background-color: rgba(20, 19, 4, 0.8666666667);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 @media (min-width: 1280px) {
   .skill__item:nth-child(2) {
@@ -859,8 +874,9 @@ li {
   }
 }
 .skill__item:nth-child(3) {
-  background: #242c32;
-  background: rgba(30, 30, 30, 0.9764705882);
+  background-color: rgba(14, 1, 1, 0.8666666667);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 @media (min-width: 1280px) {
   .skill__item:nth-child(3) {
@@ -882,8 +898,9 @@ li {
   }
 }
 .skill__item:nth-child(4) {
-  background: #242c32;
-  background: rgba(30, 30, 30, 0.9764705882);
+  background-color: rgba(2, 15, 11, 0.8666666667);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 @media (min-width: 1280px) {
   .skill__item:nth-child(4) {
@@ -905,8 +922,9 @@ li {
   }
 }
 .skill__item:nth-child(5) {
-  background: #242c32;
-  background: rgba(30, 30, 30, 0.9764705882);
+  background-color: rgba(13, 6, 16, 0.8666666667);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 @media (min-width: 1280px) {
   .skill__item:nth-child(5) {
@@ -928,8 +946,9 @@ li {
   }
 }
 .skill__item:nth-child(6) {
-  background: #242c32;
-  background: rgba(30, 30, 30, 0.9764705882);
+  background-color: rgba(17, 14, 14, 0.8666666667);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 @media (min-width: 1280px) {
   .skill__item:nth-child(6) {
@@ -1148,6 +1167,8 @@ li {
   max-height: 90vh;
   padding: 2rem 1rem;
   background-color: hsl(var(--clr-dark), 0.9);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   animation: popIn 0.3s ease;
@@ -1420,6 +1441,8 @@ li {
   border: 1px solid hsla(var(--clr-white), 0.6);
   border-bottom-width: 0.5rem;
   background: rgba(30, 30, 30, 0.9764705882);
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
   box-shadow: 0 0 15px hsla(var(--clr-white), 0.2);
 }
 .contact__form-status.active {
@@ -1449,6 +1472,8 @@ li {
 }
 .contact__bg {
   background-color: #1b1c1d;
+  background-image: url(../image/black-noise.png), linear-gradient(180deg, #1b1c1d 0%, #202122 100%);
+  background-size: 200px 200px, cover;
 }
 @media (min-width: 900px) {
   .contact__bg {
@@ -1469,6 +1494,8 @@ li {
 .footer__bg {
   border-top: 2px solid hsl(var(--clr-secondary));
   background-color: #1b1c1d;
+  background-image: url(../image/black-noise.png);
+  background-size: 200px 200px;
 }
 .footer__social {
   display: flex;
